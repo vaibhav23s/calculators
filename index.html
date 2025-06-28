@@ -8,23 +8,23 @@
     
   </style>
   <body>
-    <input type="number" id="weight" placeholder="write-your-heightin-weight"/>
+    <input type="number" id="weight" placeholder="write-your-heightin-weight"/>  
     <br /><br />
     <input type="number" id="height" placeholder="write-your-heightin-meteer"/>
     <br /><br />
     <h1 id="text-gener"></h1>
     <button>Login</button>
   </body>
-  <script>
-    const a = document.querySelector("button");
+  <script>                            
+    const a = document.querySelector("button");               //we select buton using quri
     a.addEventListener("click", function () {
       const weight = document.getElementById("weight").value;
-      const height = document.getElementById("height").value;
+      const height = document.getElementById("height").value;    //geted input boxes by id using geteliment by id
       const output = document.getElementById("text-gener");
 
       
 
-      const bmi = weight / (height * height);
+      const bmi = weight / (height * height);           
 
       if (bmi <= 18.4) {
         output.innerText=`UnderWeight :--${bmi}`;
@@ -35,6 +35,6 @@
       } else if (bmi >= 30) {
         output.innerText=`Obese:-- ${bmi}`;
       }
-    });
+    }); 
   </script>
 </html>
