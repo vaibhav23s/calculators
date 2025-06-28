@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="weight" placeholder="write-your-heightin-weight"/>
+    <br /><br />
+    <input type="number" id="height" placeholder="write-your-heightin-meteer"/>
+    <br /><br />
+    <h1 id="text-gener"></h1>
+    <button>Login</button>
+  </body>
+  <script>
+    const a = document.querySelector("button");
+    a.addEventListener("click", function () {
+      const weight = document.getElementById("weight").value;
+      const height = document.getElementById("height").value;
+      const output = document.getElementById("text-gener");
+
+      const bmi = weight / (height * height);
+
+      if (bmi <= 18.4) {
+        output.innerText="UnderWeight"+bmi+"ok";
+      } else if (bmi >= 18.5 && bmi <= 24.9) {
+        output.innerText=`Normal Weight${bmi}` ;
+      } else if (bmi >= 25 && bmi <= 29.9) {
+        output.innerText="dsjj" +bmi+"ok";
+      } else if (bmi >= 30) {
+        output.innerText="sdc "+bmi+"ok";
+      }
+    });
+  </script>
+</html>
